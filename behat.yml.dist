@@ -10,3 +10,14 @@ default:
     Behat\MinkExtension:
       base-url: 'https://en.wikipedia.org/'
       goutte: ~
+      javascript_session: 'selenium2'
+      selenium2: ~
+    Drupal\DrupalExtension:
+      api_driver: 'drupal'
+      blackbox: ~
+      selectors:
+        message_selector: '.messages'
+        error_message_selector: '.messages.messages--error'
+        success_message_selector: '.messages.messages--status'
+  formatters:
+    pretty: ~
