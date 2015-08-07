@@ -14,9 +14,4 @@ Scenario: Anonymous user can see the news overview
   Given I am not logged in
   When I visit "news"
   Then I should see the heading "News"
-  And I should see the link "Article 1"
-  And I should see the text "The first article."
-  And I should see the link "Article 2"
-  And I should see the text "The second article."
-  And I should see the link "Article 3"
-  And I should see the text "The third article."
+  And I should see 3 news articles
