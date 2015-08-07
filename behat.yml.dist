@@ -1,0 +1,11 @@
+default:
+  suites:
+    default:
+      contexts:
+        - Drupal\DrupalExtension\Context\MinkContext
+      filters:
+        tags: "~@wip"
+  extensions:
+    Behat\MinkExtension:
+      base-url: 'https://en.wikipedia.org/'
+      goutte: ~
