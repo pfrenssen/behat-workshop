@@ -11,13 +11,10 @@ use Behat\Gherkin\Node\TableNode;
 class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
 
   /**
-   * Initializes context.
-   *
-   * Every scenario gets its own context instance.
-   * You can also pass arbitrary arguments to the
-   * context constructor through behat.yml.
+   * @Then I should see :number news articles
    */
-  public function __construct() {
+  public function assertNewsArticleCount($number) {
+    $this->assertSession()->elementsCount('css', 'div.node-news-article', $number);
   }
 
 }
