@@ -11,7 +11,7 @@ default:
         tags: "~@wip"
   extensions:
     Behat\MinkExtension:
-      base-url: 'https://en.wikipedia.org/'
+      base-url: 'http://drupal7.local/'
       goutte: ~
       javascript_session: 'selenium2'
       selenium2: ~
@@ -19,10 +19,10 @@ default:
       api_driver: 'drupal'
       blackbox: ~
       drupal:
-        drupal_root: '/var/www/mysite'
+        drupal_root: '/var/www/drupal7'
       selectors:
         message_selector: '.messages'
-        error_message_selector: '.messages.messages--error'
-        success_message_selector: '.messages.messages--status'
+        error_message_selector: '.messages.error'
+        success_message_selector: '.messages.status'
   formatters:
     pretty: ~
